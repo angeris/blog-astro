@@ -1,8 +1,8 @@
-+++
-title = "Markov processes and the second law"
-tags = ["math"]
-date = Date(2018, 9, 13)
-+++
+---
+layout: ../../layouts/MarkdownPostLayout.astro
+title: "Markov processes and the second law"
+pubDate: 2018-09-13
+---
 
 *Note:* This is another one of those "quick" posts about a topic I've found to be fascinating, but which is almost never discussed.
 

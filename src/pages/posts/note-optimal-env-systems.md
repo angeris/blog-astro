@@ -1,7 +1,8 @@
-+++
-title = "A note on \"Optimal Design of Controlled Environment Agricultural Systems (...)\""
-date = Date(2021, 3, 17)
-+++
+---
+layout: ../../layouts/MarkdownPostLayout.astro
+title: "A note on \"Optimal Design of Controlled Environment Agricultural Systems (...)\""
+pubDate: 2021-03-17
+---
 
 This is just a basic note on Cetegen and Stuber's paper (apologies for the paywall) published a few days
 ago, [*Optimal Design of Controlled Environment Agricultural Systems Under Market Uncertainty*](https://www.sciencedirect.com/science/article/pii/S0098135421000636). This post "simplifies" problem (4) from a bilevel optimization problem to a single (convex) optimization problem which can be readily solved. As a side note, I only skimmed the references provided, and some were too complicated for me to understand, especially at first glance.[^wat] It is possible this technique is well known in the specific literature referenced, but hidden under mountains of notation and definitions. I also note that this is not the problem they (approximately) solve, but the method presented here might be useful in that case, too.

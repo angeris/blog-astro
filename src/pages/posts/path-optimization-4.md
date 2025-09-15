@@ -1,7 +1,8 @@
-+++
-title = "Fast shortest paths for time-varying graphs (Part 4/?)"
-date = Date(2018,3,17)
-+++
+---
+layout: ../../layouts/MarkdownPostLayout.astro
+title: "Fast shortest paths for time-varying graphs (Part 4/?)"
+pubDate: 2018-03-17
+---
 
 This is the fourth post in a series of posts describing an approach to doing path-planning in real-time on a small, embedded compute board. This is yet another relatively standalone post which mostly describes how to generate a (starting) path used in the [second](/path-optimization-thoughts2.html) and [first](/path-optimization-thoughts.html) posts to generate a feasible, smooth path that can be followed by a fixed-wing UAV.
 

@@ -1,7 +1,8 @@
-+++
-title = "PCA as a convex optimization problem"
-date = Date(2018,5,16)
-+++
+---
+layout: ../../layouts/MarkdownPostLayout.astro
+title: "PCA as a convex optimization problem"
+pubDate: 2018-05-16
+---
 
 It's been a while since I last posted (my posting has been less once every two weeks and more like once every two months), but here's a post I've been sitting on for a while that I never got around to finishing. As per [rachelbythebay's advice](https://rachelbythebay.com/w/2018/03/13/write/), I decided to just finish it and post it up. It's likely to be a little rough, but feel free to [tweet](https://twitter.com/GuilleAngeris) any questions or things that you'd like more fleshed out (as usual!).
 

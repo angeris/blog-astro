@@ -1,7 +1,8 @@
-+++
-title = "Least-squares and image processing"
-date = Date(2017,9,19)
-+++
+---
+layout: ../../layouts/MarkdownPostLayout.astro
+title: "Least-squares and image processing"
+pubDate: 2017-09-19
+---
 
 Least squares is one of those things that seems relatively simple once you first look at it (perhaps also because most linear algebra texts relegate it to nothing more than a page or two on their textbooks), but has surprisingly powerful implications that are quite nice, and, most importantly, that are easily computable.
 

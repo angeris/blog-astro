@@ -111,6 +111,13 @@ header li a:hover {
     margin-right: auto;
 }
 
+.content img {
+    max-width: 90%;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+}
+
 /* wide display: enforce maximum width of header to match content */
 @media (min-width: 940px) {
     header {

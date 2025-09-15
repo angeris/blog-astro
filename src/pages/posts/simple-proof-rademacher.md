@@ -1,7 +1,8 @@
-+++
-title = "A non-counting lower bound for the expected distance of a simple random walk"
-date = Date(2023, 6, 20)
-+++
+---
+layout: ../../layouts/MarkdownPostLayout.astro
+title: "A non-counting lower bound for the expected distance of a simple random walk"
+pubDate: 2023-06-20
+---
 
 It's been a while since I've updated the blog (likely due to the fact that I've been struggling to get it to work with Github pages...).
 Anyways, it'll, at some point, be migrated over, but for now this will have to do.

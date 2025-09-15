@@ -1,7 +1,8 @@
-+++
-title = "Machine learning, information, and tail bounds"
-date = Date(2018,9,4)
-+++
+---
+layout: ../../layouts/MarkdownPostLayout.astro
+title: "Machine learning, information, and tail bounds"
+pubDate: 2018-09-04
+---
 
 Usually, in explaining the connection between information theory and machine learning, I would begin by writing down the definition of entropy and deriving some useful results about it, and then come back to tell you that you can look at ML as an information problem, where nature picks some parameters and 'communicates them' through a noisy channel (e.g. via samples from some distribution or some other stochastic process), which you then have to infer (i.e., decode). While this approach is common, my explanations are likely to be far worse than [the](http://www.cs.cmu.edu/~aarti/Class/10704_Spring15/lecs.html) [many](https://www.princeton.edu/~eabbe/publications/tuto_slides_part1.pdf) [available](http://www.inference.org.uk/itprnn/book.pdf) [texts](https://web.stanford.edu/~montanar/RESEARCH/book.html). So I'll try to do something mildly differently (and perhaps a bit backwards) and hope it's at least somewhat entertaining and, ideally, do it all without assuming much more than some comfort with statistics (e.g. the [weak law](https://en.wikipedia.org/wiki/Law_of_large_numbers#Weak_law) and [Markov's inequality](https://en.wikipedia.org/wiki/Markov%27s_inequality)).
 

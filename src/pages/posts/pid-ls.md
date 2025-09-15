@@ -1,7 +1,8 @@
-+++
-title = "PID as least squares"
-date = Date(2017, 9, 13)
-+++
+---
+layout: ../../layouts/MarkdownPostLayout.astro
+title: "PID as least squares"
+pubDate: 2017-09-13
+---
 
 I want to say this is a folk theorem (borrowing terminology from game theory) in that everyone who does optimal control theory knows about this stuff, probably,[^people] but I haven't really seen it stated explicitly anywhere. If anyone does indeed work on optimal control, I'd love to know your thoughts! (even if you don't, I'd still like to know your thoughts on it!)
 

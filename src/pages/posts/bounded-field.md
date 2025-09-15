@@ -1,8 +1,8 @@
-+++
-title = "When are fields bounded over all possible designs?"
-date = Date(2022, 4, 17)
-draft = true
-+++
+---
+layout: ../../layouts/MarkdownPostLayout.astro
+title: "When are fields bounded over all possible designs?"
+pubDate: 2022-04-17
+---
 
 There are a few important questions that popped up while writing many
 of the bounds present in [this paper](https://arxiv.org/abs/2011.08002).

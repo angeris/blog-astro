@@ -1,7 +1,8 @@
-+++
-title = "Optimizers, momentum, and cooling schedules (Part 2/?)"
-date = Date(2017,10,22)
-+++
+---
+layout: ../../layouts/MarkdownPostLayout.astro
+title: "Optimizers, momentum, and cooling schedules (Part 2/?)"
+pubDate: 2017-10-22
+---
 
 This is the second post in a series of posts describing an initial approach to doing path-planning in real-time on a small, embedded compute board. For the first in the series which describes the energy function used below, see the [first post](/path-optimization-thoughts.html).
 

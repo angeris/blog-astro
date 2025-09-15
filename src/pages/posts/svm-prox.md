@@ -1,7 +1,8 @@
-+++
-title = "Proximal gradient for SVM"
-date = Date(2017,12,22)
-+++
+---
+layout: ../../layouts/MarkdownPostLayout.astro
+title: "Proximal gradient for SVM"
+pubDate: 2017-12-22
+---
 
 For a class that's currently being written (*ahem*, EE104), Prof. Boyd posed an interesting problem of writing a (relatively general, but ideally simple) proximal-gradient optimizer. The idea is that would act as a black-box way for students to plug in machine learning models of a specific form and have the optimizer do all of the hard work immediately, while appearing as transparent as possible.
 

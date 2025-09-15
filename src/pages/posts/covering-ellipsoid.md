@@ -1,7 +1,8 @@
-+++
-title = "The S-procedure and small covering ellipsoids"
-date = Date(2019,6,5)
-+++
+---
+layout: ../../layouts/MarkdownPostLayout.astro
+title: "The S-procedure and small covering ellipsoids"
+pubDate: 2019-06-05
+---
 
 *Note:* This post was inspired by [Kunal Shah](https://msl.stanford.edu/people/kunal-shah)'s question that came up at some point during one of our meetings: is there an efficient way of finding an ellipsoid which covers the intersections and unions of a bunch of other ellipsoids?
 

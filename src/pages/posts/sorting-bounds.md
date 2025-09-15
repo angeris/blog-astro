@@ -1,7 +1,8 @@
-+++
-title = "Comparisons and information theory: why the worst-case complexity of sorting is n log n"
-date = Date(2020,6,19)
-+++
+---
+layout: ../../layouts/MarkdownPostLayout.astro
+title: "Comparisons and information theory: why the worst-case complexity of sorting is n log n"
+pubDate: 2020-06-19
+---
 
 In this post, we'll talk a bit about the usual proofs about the
 worst-case query complexity of sorting (at least, in the deterministic case) and then
@@ -25,9 +26,7 @@ notation here, of course, but the meaning should be clear.) This means that we c
 behavior of the algorithm as a tree, where $C_k$ is a child node of $C_{k-1}$ which itself is a child node of $C_{k-2}$, etc. Additionally, the tree is
 *binary* since the output of a comparison is only one of two possibilities (if $C_k = (a, b)$, then either $a\le b$ or $b \le a$).
 
-~~~
-<img src="/content/images/sorting-bounds/comparison_tree.png" class="insert" style="width: 80%">
-~~~
+![Comparison tree](/images/sorting-bounds/comparison_tree.png)
 
 Finally, let the leaf nodes of this tree be the list of indices (say, $p$, where each entry is an index, $p_i \in \{1, \dots, n\}$ for $i=1, \dots, n$) such that the list permuted
 at these indices is sorted, $L_{p_1} \le L_{p_2} \le \dots, \le L_{p_n}$. Note that the number of nodes needed to get from the root node to a given

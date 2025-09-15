@@ -1,7 +1,8 @@
-+++
-title = "An update and who knows"
-date = Date(2023, 7, 22)
-+++
+---
+layout: ../../layouts/MarkdownPostLayout.astro
+title: "An update and who knows"
+pubDate: 2023-07-22
+---
 
 Looks like I was officially banned from Twitter for some extremely opaque
 reason. I guess this means I'll be writing here more.

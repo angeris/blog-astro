@@ -1,7 +1,8 @@
-+++
-title = "A simple proof of Shapley–Folkman"
-date = Date(2024, 6, 9)
-+++
+---
+layout: ../../layouts/MarkdownPostLayout.astro
+title: "A simple proof of Shapley–Folkman"
+pubDate: 2024-06-09
+---
 
 This post goes over a simple proof of the Shapley–Folkman lemma which I
 haven't seen published (though I'm sure everyone has a version or variation of

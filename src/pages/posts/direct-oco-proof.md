@@ -1,7 +1,8 @@
-+++
-title = "Online gradient descent has low regret: a one-ish-liner"
-date = Date(2024, 2, 7)
-+++
+---
+layout: ../../layouts/MarkdownPostLayout.astro
+title: "Online gradient descent has low regret: a one-ish-liner"
+pubDate: 2024-02-07
+---
 
 This post is a bit silly in that this is an obviously well-known result, but
 I've never seen a direct proof of this that did not at least introduce some

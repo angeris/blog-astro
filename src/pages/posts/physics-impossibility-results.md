@@ -1,7 +1,8 @@
-+++
-title = "Physics, optimization, and impossibility"
-date = Date(2018,12,17)
-+++
+---
+layout: ../../layouts/MarkdownPostLayout.astro
+title: "Physics, optimization, and impossibility"
+pubDate: 2018-12-17
+---
 
 *Note:* this post is based on the results of [this arXiv paper](https://arxiv.org/abs/1811.12936) which I've been working on with Stephen Boyd and Jelena Vuckovic.
 

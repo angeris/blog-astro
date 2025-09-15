@@ -1,7 +1,8 @@
-+++
-title = "Another short proof of OCO and miscellanea"
-date = Date(2024, 3, 27)
-+++
+---
+layout: ../../layouts/MarkdownPostLayout.astro
+title: "Another short proof of OCO and miscellanea"
+pubDate: 2024-03-27
+---
 
 A short post with two silly, but ultimately useful, results. The first is [yet
 another proof of OGD being low regret](/content/direct-oco-proof). The second
