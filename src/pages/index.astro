@@ -1,16 +1,15 @@
 ---
+import BlogPost from '../components/BlogPost.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+const allPosts = Object.values(import.meta.glob('./posts/*.md', { eager: true }));
 
+function compareDates(a: any, b: any) {
+	return new Date(b.frontmatter.pubDate).getTime() - new Date(a.frontmatter.pubDate).getTime();
+}
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout pageTitle="Longest Path Search">
+	<ul class="post-list">
+		{allPosts.sort(compareDates).map((post: any) => <BlogPost url={post.url} title={post.frontmatter.title} date={post.frontmatter.pubDate} />)}
+	</ul>
+</BaseLayout>

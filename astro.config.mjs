@@ -1,5 +1,12 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
+import remarkMath from "remark-math";
+import rehypeMathML from "@daiji256/rehype-mathml";
 
 // https://astro.build/config
-export default defineConfig({});
+export default defineConfig({
+	markdown: {
+		remarkPlugins: [remarkMath],
+		rehypePlugins: [rehypeMathML],
+	},
+});
