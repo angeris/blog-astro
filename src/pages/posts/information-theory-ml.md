@@ -18,7 +18,7 @@ $$
 
 The proof that this estimator is consistent is relatively simple and assumes only the [weak law of large numbers](https://en.wikipedia.org/wiki/Law_of_large_numbers#Weak_law), which says that the empirical mean of a bunch of i.i.d variables $\{Y_i\}$ converges[^inprobability] to its expectation
 $$
-\frac{1}{n}\sum_i Y_i \overset{p}{\to} \mathbb{E}[Y_1].
+\frac{1}{n}\sum_i Y_i \overset{p}{\to} \mathbf{E}[Y_1].
 $$
 (from here on out, I will write 'converges in probability' just as $\to$, instead of $\overset{p}{\to}$).
 
@@ -38,21 +38,21 @@ $$
 
 If we can prove the quantity above is negative with high probability, then we're set! So divide by $n$ on both sides and note that, by the weak law, we have
 $$
-\frac{1}{n}\sum_i \log\left(\frac{p(x^i~|~\theta)}{p(x^i~|~\theta^*)}\right) \to \mathbb{E}_{X}\left(\log\left(\frac{p(X~|~\theta)}{p(X~|~\theta^*)}\right)\right).
+\frac{1}{n}\sum_i \log\left(\frac{p(x^i~|~\theta)}{p(x^i~|~\theta^*)}\right) \to \mathbf{E}_{X}\left(\log\left(\frac{p(X~|~\theta)}{p(X~|~\theta^*)}\right)\right).
 $$
 (the expectation here is taken with respect to the true distribution $p(\cdot ~|~\theta^*)$). Now, $\log(x)$ is a concave function (proof: take the second derivative and note that it's always negative), so, this means that
 $$
-\mathbb{E}(\log(Y)) \le \log(\mathbb{E}(Y)),
+\mathbf{E}(\log(Y)) \le \log(\mathbf{E}(Y)),
 $$
 for any random variable $Y$ (this is [Jensen's inequality](https://en.wikipedia.org/wiki/Jensen%27s_inequality)). In fact, in this case, equality can only happen if $Y$ takes on a single value, so in general, we have
 $$
-\mathbb{E}(\log(Y)) < \log(\mathbb{E}(Y)).
+\mathbf{E}(\log(Y)) < \log(\mathbf{E}(Y)).
 $$
 
 Applying this inequality to the previous line is the only magical part of the proof, which gives us
 $$
 \begin{aligned}
-\mathbb{E}_{X}\left(\log\left(\frac{p(X~|~\theta)}{p(X~|~\theta^*)}\right)\right) &< \log\mathbb{E}_{X}\left(\frac{p(X~|~\theta)}{p(X~|~\theta^*)}\right) \\
+\mathbf{E}_{X}\left(\log\left(\frac{p(X~|~\theta)}{p(X~|~\theta^*)}\right)\right) &< \log\mathbf{E}_{X}\left(\frac{p(X~|~\theta)}{p(X~|~\theta^*)}\right) \\
 &= \log \int_S p(X~|~\theta^*)\frac{p(X~|~\theta)}{p(X~|~\theta^*)}~dX\\
 &= \log \int_S p(X~|~\theta)~dX\\
 &= \log 1\\
@@ -77,7 +77,7 @@ P\left(\prod_i p(x^i~|~\theta) \ge \prod_i p(x^i~|~\theta^*)\right)
 $$
 that depends on some simple, known quantities? Applying [Markov's inequality](https://en.wikipedia.org/wiki/Markov%27s_inequality) directly yields the trivial result
 $$
-P\left(\prod_i \frac{p(x^i~|~\theta)}{p(x^i~|~\theta^*)} \ge 1\right) \le \mathbb{E}_x\left(\prod_i \frac{p(x^i~|~\theta)}{p(x^i~|~\theta^*)}\right) = 1,
+P\left(\prod_i \frac{p(x^i~|~\theta)}{p(x^i~|~\theta^*)} \ge 1\right) \le \mathbf{E}_x\left(\prod_i \frac{p(x^i~|~\theta)}{p(x^i~|~\theta^*)}\right) = 1,
 $$
 that the probability is at most 1. So where do we go from here? Well, as before, we can turn the product into a sum by taking the log of both sides and dividing by $n$ (déjà vu, anyone?),
 $$
@@ -102,7 +102,7 @@ so as the number of samples increases, our wrong hypothesis becomes exponentiall
 
 Of course, at any point in this proof, we could've multiplied both sides of the inequality by $\lambda > 0$ and everything would've remained true, but note that then we would have a bound
 $$
-P\left(\frac1n\sum_i \log\left( \frac{p(x^i~|~\theta)}{p(x^i~|~\theta^*)}\right) \ge \varepsilon\right) \le \mathbb{E}_X\left[\left(\frac{p(X ~|~ \theta)}{p(X~|~\theta^*)}\right)^\lambda\right]~ e^{-\lambda n\varepsilon},
+P\left(\frac1n\sum_i \log\left( \frac{p(x^i~|~\theta)}{p(x^i~|~\theta^*)}\right) \ge \varepsilon\right) \le \mathbf{E}_X\left[\left(\frac{p(X ~|~ \theta)}{p(X~|~\theta^*)}\right)^\lambda\right]~ e^{-\lambda n\varepsilon},
 $$
 which looks almost nice, except that we have no control over the tails of 
 
@@ -115,13 +115,13 @@ since at no point have we assumed anything about the dependence of $p$ on $\thet
 It is possible to make some assumptions about how these tails behave, but it's not entirely clear that these assumptions would be natural or useful. If anyone has further thoughts on this, I'd love to hear them!
 
 ## On Fisher Information and Lower-Bounds
-The second set of lower-bounds that are easy to derive and are surprisingly useful are the Cramér-Rao bounds on estimators. In particular, we can show that, for any estimator $\hat \theta$ whose expectation is $\mathbb{E}(\hat \theta) = \psi(\theta)$, with underlying probability distribution $p(\cdot~|~\theta)$, then[^dimensions]
+The second set of lower-bounds that are easy to derive and are surprisingly useful are the Cramér-Rao bounds on estimators. In particular, we can show that, for any estimator $\hat \theta$ whose expectation is $\mathbf{E}(\hat \theta) = \psi(\theta)$, with underlying probability distribution $p(\cdot~|~\theta)$, then[^dimensions]
 $$
 \operatorname{Var}(\theta) \ge \frac{[\psi ' (\theta)]^2}{I(\theta)},
 $$
 where $I(\theta) \ge 0$ is the Fisher information of $p(\cdot~|~\theta)$, which is something like the local curvature of $\log p(\cdot~|~\theta)$ around $\theta$. In particular, it is defined as
 $$
-I(\theta) = -\mathbb{E}_X\left(\frac{\partial^2 \log p(X~|~\theta)}{\partial \theta^2}\right).
+I(\theta) = -\mathbf{E}_X\left(\frac{\partial^2 \log p(X~|~\theta)}{\partial \theta^2}\right).
 $$
 In other words, the inequality says that, the more flat $\log p$ is at $\theta$, the harder it is to correctly guess the right parameter. This makes sense, since the flatter the distribution is at this point, the harder it is for us to distinguish it from points around it.
 
@@ -129,7 +129,7 @@ I'll give a simple proof of this statement soon (in another post, since this one
 
 At one point we used the fact that
 $$
-\frac{1}{n}\sum_i \log\left(\frac{p(x^i~|~\theta)}{p(x^i~|~\theta^*)}\right) \to \mathbb{E}_{X}\left(\log\left(\frac{p(X~|~\theta)}{p(X~|~\theta^*)}\right)\right) \equiv -D(\theta ~\Vert~\theta^*) \le 0.
+\frac{1}{n}\sum_i \log\left(\frac{p(x^i~|~\theta)}{p(x^i~|~\theta^*)}\right) \to \mathbf{E}_{X}\left(\log\left(\frac{p(X~|~\theta)}{p(X~|~\theta^*)}\right)\right) \equiv -D(\theta ~\Vert~\theta^*) \le 0.
 $$
 This quantity on the right is called the [KL-divergence](https://en.wikipedia.org/wiki/Kullback–Leibler_divergence), and it has some very nice information-theoretic interpretations, which I highly recommend you read about, but which I will not get into here. Anyways, assuming that $\theta$ is close to $\theta^*$, we can do a Taylor expansion around the true parameter $\theta^*$ to find
 
@@ -139,7 +139,7 @@ $$
 and the quantity on the right hand side goes to, as $n\uparrow \infty$,
 $$
 \begin{aligned}
-\frac{1}{n}\sum_i \left((\theta - \theta^*)\frac{\partial_\theta p(\cdot ~|~\theta^*)}{p(\cdot ~|~ \theta^*)} + O((\theta - \theta^*)^2)\right) &\to (\theta - \theta^*)\mathbb{E}_X\left(\frac{\partial_\theta p(X ~|~\theta^*)}{p(X ~|~ \theta^*)}\right) \\
+\frac{1}{n}\sum_i \left((\theta - \theta^*)\frac{\partial_\theta p(\cdot ~|~\theta^*)}{p(\cdot ~|~ \theta^*)} + O((\theta - \theta^*)^2)\right) &\to (\theta - \theta^*)\mathbf{E}_X\left(\frac{\partial_\theta p(X ~|~\theta^*)}{p(X ~|~ \theta^*)}\right) \\
 &= (\theta - \theta^*)\int_S \frac{\partial_\theta p(X~|~\theta^*)}{p(X~|~\theta^*)}p(X~|~\theta^*)~dX\\
 &=(\theta - \theta^*)\int_S \partial_\theta p(X~|~\theta^*)~dX\\
 &=(\theta - \theta^*)\partial_\theta\left(\int_S p(X~|~\theta^*)~dX\right)\\
@@ -149,7 +149,7 @@ $$
 $$
 ...zero?![^dominatedconvergence] Well, the expectation of the first derivative of the log-likelihood vanishes, so taking the second term in the Taylor expansion yields
 $$
-\frac{1}{2}(\theta - \theta^*)^2\mathbb{E}_X\left(\partial_\theta^2 \log(p(X~|~\theta^*)\right)) = -\frac12(\theta - \theta^*)^2I(\theta^*).
+\frac{1}{2}(\theta - \theta^*)^2\mathbf{E}_X\left(\partial_\theta^2 \log(p(X~|~\theta^*)\right)) = -\frac12(\theta - \theta^*)^2I(\theta^*).
 $$
 
 Putting it all together, we have that
@@ -161,11 +161,11 @@ or that the curvature of the KL-divergence around $\theta^*$ is the Fisher infor
 On the other hand, I haven't been able to find a direct proof of the above bound (or, even, any other nice bounds) given *only* the above observation. So, while the connection might make sense, it turns out the proof of the Cramér-Rao bound uses a slightly different technique, which I will present later (along with some other fun results!).
 
 
-[^inprobability]: In probability. I.e., the probability that the empirical mean differs from the expectation by some amount, $\left|\frac{1}{n}\sum_i Y_i - \mathbb{E}[Y_1]\right| > \varepsilon$, goes to zero as $n\uparrow \infty$. A simple proof in the finite-variance case follows from Chebyshev's inequality (exercise for the reader!).
+[^inprobability]: In probability. I.e., the probability that the empirical mean differs from the expectation by some amount, $\left|\frac{1}{n}\sum_i Y_i - \mathbf{E}[Y_1]\right| > \varepsilon$, goes to zero as $n\uparrow \infty$. A simple proof in the finite-variance case follows from Chebyshev's inequality (exercise for the reader!).
 
 [^trick]: It's often easier to deal with log-probabilities than it is to deal with probabilities, so this trick is relatively common.
 
-[^monotonicity]: In fact, the logarithm is *strictly* monotonic, so it preserves minima uniquely. In other words, for any function $\phi: S\to \mathbb{R}^{> 0}$, $\phi$ and $\log \circ\, \phi$ have minima and maxima at exactly the same points.
+[^monotonicity]: In fact, the logarithm is *strictly* monotonic, so it preserves minima uniquely. In other words, for any function $\phi: S\to \mathbf{R}^{> 0}$, $\phi$ and $\log \circ\, \phi$ have minima and maxima at exactly the same points.
 
 [^sneaky]: I am, of course, being sneaky: the subtraction *happens* to work since this just *happens* to yield the KL-divergence in expectation—but that's how it goes. Additionally, the requirement really is not that $\theta \ne \theta^*$, but rather that $p(x~|~\theta^*) \ne p(x~|~\theta)$, just in case there happen to be multiple hypotheses with equivalent distributions. Since you're reading this then just assume throughout that $p(\cdot~|~\theta) \ne p(\cdot~|~\theta^*)$ on some set with nonzero probability (in the base distribution) whenever $\theta \ne \theta^*$.
 

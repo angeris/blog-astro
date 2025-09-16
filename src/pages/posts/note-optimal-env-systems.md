@@ -19,7 +19,7 @@ $$
 & \text{subject to} && h(x) \le 0,
 \end{aligned}
 $$
-with variables $x \in \mathbb{R}^m$ and $y \in \mathbb{R}^n$ and functions $f : \mathbb{R}^m \times \mathbb{R}^n \to \mathbb{R}$, $g:\mathbb{R}^n \to \mathbb{R}$, and $h: \mathbb{R}^m \to \mathbb{R}$. Now, consider the usual Lagrangian of the "inner problem" (the one with the max over $y$), which we know is
+with variables $x \in \mathbf{R}^m$ and $y \in \mathbf{R}^n$ and functions $f : \mathbf{R}^m \times \mathbf{R}^n \to \mathbf{R}$, $g:\mathbf{R}^n \to \mathbf{R}$, and $h: \mathbf{R}^m \to \mathbf{R}$. Now, consider the usual Lagrangian of the "inner problem" (the one with the max over $y$), which we know is
 $$
 L(x, y,\lambda) = f(x, y) - \lambda g(y).
 $$
@@ -77,7 +77,7 @@ $$
     &&& 0 \le x \le 1,
 \end{aligned}
 $$
-with variable $x \in \mathbb{R}^n$, where $r$ is some vector of returns (but the specifics don't matter) and $\mathcal{M}$ is:
+with variable $x \in \mathbf{R}^n$, where $r$ is some vector of returns (but the specifics don't matter) and $\mathcal{M}$ is:
 $$
 \mathcal{M} = \{M \ge 0 \mid M^-_{ij} \le M_{ij} \le M^+_{ij}, ~~ i, j=1, \dots, n\}.
 $$
@@ -91,11 +91,11 @@ $$
     &&& M \ge 0,
 \end{aligned}
 $$
-with variable $M \in \mathbb{R}^{n\times n}$. We can easily write a (slightly not canonical) Lagrangian:
+with variable $M \in \mathbf{R}^{n\times n}$. We can easily write a (slightly not canonical) Lagrangian:
 $$
 L(x, M, \Lambda^+, \Lambda^-) = x^TMx - \mathrm{tr}(\Lambda^+(M - M^+)) + \mathrm{tr}(\Lambda^-(M - M^-)),
 $$
-where $\Lambda^+, \Lambda^- \in \mathbb{R}^{n\times n}_+$ are elementwise nonnegative. (The Lagrangian is non-canonical because I have not included the constraint $M \ge 0$, which we will enforce below.) It is not hard to show that
+where $\Lambda^+, \Lambda^- \in \mathbf{R}^{n\times n}_+$ are elementwise nonnegative. (The Lagrangian is non-canonical because I have not included the constraint $M \ge 0$, which we will enforce below.) It is not hard to show that
 $$
 \sup_{M \ge 0} L(x, M, \Lambda^+, \Lambda^-) = \begin{cases}
     \mathrm{tr}(\Lambda^+M^+) - \mathrm{tr}(\Lambda^-M^-) & xx^T \le \Lambda^+ - \Lambda^-\\
@@ -115,7 +115,7 @@ $$
     &&& \Lambda^+_{ij}, \Lambda^-_{ij} \ge 0, \quad i,j =1, \dots, n.
 \end{aligned}
 $$
-The (extra!) variables $\Lambda^+, \Lambda^- \in \mathbb{R}^{n\times n}$ are included along with the original variable $x \in \mathbb{R}^n$, and the same problem data as before. This problem, by use of the Schur complement applied to the semidefinite inequality, is easily recast into standard SDP form and can be solved by most standard convex optimization problem solvers, such as [SCS](https://github.com/cvxgrp/scs) or [Mosek](https://www.mosek.com).
+The (extra!) variables $\Lambda^+, \Lambda^- \in \mathbf{R}^{n\times n}$ are included along with the original variable $x \in \mathbf{R}^n$, and the same problem data as before. This problem, by use of the Schur complement applied to the semidefinite inequality, is easily recast into standard SDP form and can be solved by most standard convex optimization problem solvers, such as [SCS](https://github.com/cvxgrp/scs) or [Mosek](https://www.mosek.com).
 
 Quick edit (3/18/22): Thanks to [bodonoghue85](https://twitter.com/bodonoghue85) for [finding a typo](https://twitter.com/bodonoghue85/status/1372634252924358662)!
 

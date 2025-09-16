@@ -30,7 +30,7 @@ $$
 \text{subject to} & h(x) \le 0,
 \end{array}
 $$
-(this encompasses essentially every optimization problem ever) with objective function $f: \mathbb{R}^n \to \mathbb{R}$ and constraint function $h: \mathbb{R}^n \to \mathbb{R}^m$, where the inequality is taken elementwise. Call the optimal value of the objective of the optimization problem $p^\star$, which we will see again soon.
+(this encompasses essentially every optimization problem ever) with objective function $f: \mathbf{R}^n \to \mathbf{R}$ and constraint function $h: \mathbf{R}^n \to \mathbf{R}^m$, where the inequality is taken elementwise. Call the optimal value of the objective of the optimization problem $p^\star$, which we will see again soon.
 
 Continuing, we can then formulate the *Lagrangian* of the problem,
 $$
@@ -81,13 +81,13 @@ Many of the problems we're interested in (including design in photonics via Maxw
 $$
 (A + \mathrm{diag}(\theta))z = b,
 $$
-where $\theta \in \mathbb{R}^n$ are the design parameters (*e.g.* permittivity in the case of photonics, or speed of sound in the material in the case of acoustics) and $z \in \mathbb{R}^n$ is the field (*e.g.* the electric field in photonics, or the amplitude of the wave in acoustics). $A \in \mathbb{R}^{n\times n}$ is a matrix encoding the physics (the curl of the curl in Maxwell's equations, or a discretized Laplacian in Helmholtz's) and $b \in \mathbb{R}^n$ is an excitation of the field.
+where $\theta \in \mathbf{R}^n$ are the design parameters (*e.g.* permittivity in the case of photonics, or speed of sound in the material in the case of acoustics) and $z \in \mathbf{R}^n$ is the field (*e.g.* the electric field in photonics, or the amplitude of the wave in acoustics). $A \in \mathbf{R}^{n\times n}$ is a matrix encoding the physics (the curl of the curl in Maxwell's equations, or a discretized Laplacian in Helmholtz's) and $b \in \mathbf{R}^n$ is an excitation of the field.
 
 More specifically, take a peek at Helmholtz's equation:
 $$
 \nabla^2 a(x) + \left(\frac{\omega^2}{c(x)^2}\right)a(x) = u(x),
 $$
-where $c: \mathbb{R}^3 \to \mathbb{R}_{> 0}$ is a function specifying the speed of sound at every point in the material, while $a: \mathbb{R}^3 \to \mathbb{R}$ is a function specifying the amplitude at each point, $u: \mathbb{R}^3 \to \mathbb{R}$ is a function specifying an excitation, and $\omega \in \mathbb{R}_{\ge 0}$ is the frequency of the wave. We can make some simple correspondences:
+where $c: \mathbf{R}^3 \to \mathbf{R}_{> 0}$ is a function specifying the speed of sound at every point in the material, while $a: \mathbf{R}^3 \to \mathbf{R}$ is a function specifying the amplitude at each point, $u: \mathbf{R}^3 \to \mathbf{R}$ is a function specifying an excitation, and $\omega \in \mathbf{R}_{\ge 0}$ is the frequency of the wave. We can make some simple correspondences:
 $$
 \Bigg(\underbrace{\nabla^2}_{A} + \underbrace{\bigg(\frac{\omega^2}{c(x)^2}\bigg)}_{\mathrm{diag}(\theta)}\Bigg)\underbrace{a(x)}_{z} = \underbrace{u(x)}_{b}.
 $$
@@ -136,7 +136,7 @@ g(\nu) &= \inf_{\theta^\mathrm{min} \le \theta \le \theta^\mathrm{max}} \left(\i
 $$
 The trick is to notice two things. One, that the objective is concave in $\theta$ and, two, that the objective is *separable* over each component of $\theta$. 
 
-First off, let's say a function $v: \mathbb{R} \to \mathbb{R}$ is concave over the interval $[L, U]$, then it achieves its minimum value at the boundaries of the interval. Why? Well, the definition of concavity says, for every $0 \le \gamma \le 1$,
+First off, let's say a function $v: \mathbf{R} \to \mathbf{R}$ is concave over the interval $[L, U]$, then it achieves its minimum value at the boundaries of the interval. Why? Well, the definition of concavity says, for every $0 \le \gamma \le 1$,
 $$
 v(\gamma L + (1- \gamma)U) \ge \gamma v(L) + (1-\gamma)v(U) \ge \min\{v(L), v(U)\}.
 $$

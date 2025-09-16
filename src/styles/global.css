@@ -164,3 +164,7 @@ ul.post-list li a {
     font-weight: 300;
     padding-right: .2em;
 }
+
+.astro-code {
+    font-size: 15px;
+}

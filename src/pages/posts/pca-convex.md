@@ -23,13 +23,13 @@ $$
 \end{aligned}
 $$
 
-where $\| B \|_F^2$ is the square of the Frobenius norm of $B$ (i.e. it is the sum of the squares of each entry of $B$). Why is this useful? Well, in the general formulation, we can write the SVD decomposition of some optimal $X^* \in \mathbb{R}^{m\times n}$,
+where $\| B \|_F^2$ is the square of the Frobenius norm of $B$ (i.e. it is the sum of the squares of each entry of $B$). Why is this useful? Well, in the general formulation, we can write the SVD decomposition of some optimal $X^* \in \mathbf{R}^{m\times n}$,
 
 $$
 X^* = U^*\Sigma^* (V^*)^T
 $$
 
-with orthogonal $U^* \in \mathbb{R}^{m\times k}, V^*\in \mathbb{R}^{n\times k}$ and diagonal $\Sigma^* \in \mathbb{R}^{k\times k}$. Then the columns of $V^*$ represent the $k$ most important features of $A$ (assuming that each row of $A$ is a point of the dataset). This may seem slightly redundant if you already know the punchline, but we'll get there in a second. 
+with orthogonal $U^* \in \mathbf{R}^{m\times k}, V^*\in \mathbf{R}^{n\times k}$ and diagonal $\Sigma^* \in \mathbf{R}^{k\times k}$. Then the columns of $V^*$ represent the $k$ most important features of $A$ (assuming that each row of $A$ is a point of the dataset). This may seem slightly redundant if you already know the punchline, but we'll get there in a second. 
 
 For now, define the SVD of $A$ in a similar way to the above
 

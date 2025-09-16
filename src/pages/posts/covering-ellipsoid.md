@@ -12,11 +12,11 @@ While this question has been explored [somewhat](https://pdfs.semanticscholar.or
 
 The [S-procedure](https://en.wikipedia.org/wiki/S-procedure) is a well known lemma in control theory that seeks to answer the following question:
 
-Let's say we have a bunch of quadratic functions $f_0, f_1, f_2, \dots, f_n : \mathbb{R}^m \to \mathbb{R}$. When is it true that
+Let's say we have a bunch of quadratic functions $f_0, f_1, f_2, \dots, f_n : \mathbf{R}^m \to \mathbf{R}$. When is it true that
 $$
     f_i(x) \le 0 ~~ \text{for $i=1, \dots, n$} \implies  f_0(x) \le 0,
 $$
-for $x \in \mathbb{R}^m$? (Recall that a quadratic is a function of the form $f(x) = x^TPx + 2q^Tx + r$ for symmetric $P \in \mathbb{R}^{m\times m}$, $q \in \mathbb{R}^m$, and $r \in \mathbb{R}$).
+for $x \in \mathbf{R}^m$? (Recall that a quadratic is a function of the form $f(x) = x^TPx + 2q^Tx + r$ for symmetric $P \in \mathbf{R}^{m\times m}$, $q \in \mathbf{R}^m$, and $r \in \mathbf{R}$).
 
 There are many reasons to attempt to answer this (surprisingly useful) question. The original motivations were to show [stability of systems](https://stanford.edu/class/ee363/lectures/lmi-s-proc.pdf), though the domain of applications is certainly larger. We can use this to show anything from impossibility results (for example, many of the results of [this paper](https://arxiv.org/abs/1811.12936) can be recast in terms of the S-procedure) to, well, in our case, the construction of a small covering ellipsoid from a bunch of other ellipsoids, which is itself useful for things like filtering (for localizing drones from noisy measurements for example) along with many other applications.
 
@@ -39,7 +39,7 @@ The converse is slightly trickier, so I will defer to [B&V's *Convex Optimizatio
 ## The general case
 The general case is really only a slight change from the $n=1$ case (except that the converse of the statement is not true). In particular, if there exist $\lambda \ge 0$ such that
 $$
-    f_0(x) \le \sum_i \lambda_i f_i(x) ~~ \text{for all $x \in \mathbb{R}^m$},
+    f_0(x) \le \sum_i \lambda_i f_i(x) ~~ \text{for all $x \in \mathbf{R}^m$},
 $$
 then, $f_i(x) \le 0 ~ \text{for} ~ i = 1, \dots, n \implies f_0(x) \le 0$. Showing this is nearly the same as the $n=1$ case,
 $$
@@ -55,7 +55,7 @@ Ellipsoids are a particularly nice family to work with since, as you may have gu
 $$
 \mathcal{E} = \{x \mid f(x) \le 0\},
 $$
-where $f: \mathbb{R}^m \to \mathbb{R}$ is a convex quadratic. This definition gives us a way of translating statements about sets (inclusion, etc) into statements about the functions which generate them. In particular, if we have two ellipsoids $\mathcal{E}, \mathcal{E}_0 \subseteq \mathbb{R}^n$ defined by the convex quadratics $f, f_0$, then
+where $f: \mathbf{R}^m \to \mathbf{R}$ is a convex quadratic. This definition gives us a way of translating statements about sets (inclusion, etc) into statements about the functions which generate them. In particular, if we have two ellipsoids $\mathcal{E}, \mathcal{E}_0 \subseteq \mathbf{R}^n$ defined by the convex quadratics $f, f_0$, then
 $$
 \mathcal{E} \subseteq \mathcal{E}_0 \iff (f(x) \le 0 \implies f_0(x) \le 0).
 $$

@@ -14,7 +14,7 @@ Essentially the problem will be broken down into three basic steps (and a fourth
 
 1. Discretize the space and goals into a graph problem which is guaranteed to be (a) *damn fast to solve* and (b) to always give a feasible result (minus a curvature constraint—that will come in later).
 
-2. Make the resulting path through the graph into an ordered set of points $x_i \in \mathbb{R}^2$ (or $\mathbb{R}^3$, depending on what problem needs to be solved) through actual Euclidean space.
+2. Make the resulting path through the graph into an ordered set of points $x_i \in \mathbf{R}^2$ (or $\mathbf{R}^3$, depending on what problem needs to be solved) through actual Euclidean space.
 
 3. Perform continuous optimization starting at this resulting path in order to meet curvature constraints and add some 'finishing touches' (this will be formalized in a second, don't worry).
 

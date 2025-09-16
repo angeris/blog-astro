@@ -8,5 +8,11 @@ export default defineConfig({
 	markdown: {
 		remarkPlugins: [remarkMath],
 		rehypePlugins: [rehypeMathML],
+		shikiConfig: {
+			themes: {
+				light: 'rose-pine-dawn',
+				dark: 'rose-pine',
+			}
+		}
 	},
 });
