@@ -141,4 +141,6 @@ There are some even more powerful generalizations of Fano's inequality which can
 
 This is all to say that, even though entropy is a magical quantity, that doesn't mean we can't say very rigorous things about it (and make our intuitions about lower bounds even more rigorous, to boot!).
 
+---
+
 [^entropy]: In fact, the entropy is really a measure of how close a variable is to the uniform distribution, in the case of compact domains $\mathcal X$—the higher the entropy, the closer it is.

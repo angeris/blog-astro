@@ -232,6 +232,7 @@ But are there fields that have very natural versions of these? One example might
 Either way, I look forward to the future where our AI overlords interact seamlessly with the stuff we do on the day to day, rather than feeling like a very cool and personalized textbook (with some small amount of agency) that we get to query.
 
 ---
+
 [^1]: Of course, by Curry–Howard, we know that functions indeed are implications, but I would make the argument that this is more of a very nice _accounting tool_ than it is a primary definition. Unless you're a constructivist, in which case, fine, you can _take it as a definition_ but I think this is one of those cases where the abstraction is being retrofitted to a tool rather than worked with directly.
 
 [^2]: This ideally can be fixed by adding an `Option` type in the type system directly. See the discussion [here](https://github.com/acornprover/acornlib/pull/25#discussion_r2283517565).

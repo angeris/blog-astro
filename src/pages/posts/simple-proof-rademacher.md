@@ -154,6 +154,6 @@ Lowther](https://twitter.com/Almost_Sure/status/1755601562737737766) for
 pointing out that I was missing a factor of 3 in the fourth moment calculation
 in an earlier version of this post!
 
-
+---
 
 [^csproof]: Possibly the most elegant proof of Cauchy--Schwarz I know is based on minimizing a quadratic, and goes a little like this. Note that $\E[(X - tY)^2]\ge 0$ for any $t \in \reals$. (That this expectation exists can be shown for any $t$ assuming both $X$ and $Y$ have finite second moment. If not, the inequality is also trivial.) Expanding gives $\E[X^2] - 2t\E[XY] + t^2\E[Y^2] \ge 0$. Minimizing the left hand side over $t$ then shows that $t^\star = \E[XY]/\E[Y^2]$, which gives $$ \E[X^2] - \frac{\E[XY]^2}{\E[Y^2]} \ge 0.$$ Multiplying both sides by $\E[Y^2]$ gives the final result.

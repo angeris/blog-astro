@@ -79,7 +79,7 @@ What is interesting is that this optimization problem is always convex—*e.g.*,
 ### Problem formulation
 Many of the problems we're interested in (including design in photonics via Maxwell's equations,[^maxwell] acoustics via Helmholtz's equations, quantum mechanics via Schrodinger's equation, and heat engineering via the heat equation) have physics equations of the form (once discretized)
 $$
-(A + \mathrm{diag}(\theta))z = b,
+(A + \diag(\theta))z = b,
 $$
 where $\theta \in \mathbf{R}^n$ are the design parameters (*e.g.* permittivity in the case of photonics, or speed of sound in the material in the case of acoustics) and $z \in \mathbf{R}^n$ is the field (*e.g.* the electric field in photonics, or the amplitude of the wave in acoustics). $A \in \mathbf{R}^{n\times n}$ is a matrix encoding the physics (the curl of the curl in Maxwell's equations, or a discretized Laplacian in Helmholtz's) and $b \in \mathbf{R}^n$ is an excitation of the field.
 
@@ -89,7 +89,7 @@ $$
 $$
 where $c: \mathbf{R}^3 \to \mathbf{R}_{> 0}$ is a function specifying the speed of sound at every point in the material, while $a: \mathbf{R}^3 \to \mathbf{R}$ is a function specifying the amplitude at each point, $u: \mathbf{R}^3 \to \mathbf{R}$ is a function specifying an excitation, and $\omega \in \mathbf{R}_{\ge 0}$ is the frequency of the wave. We can make some simple correspondences:
 $$
-\Bigg(\underbrace{\nabla^2}_{A} + \underbrace{\bigg(\frac{\omega^2}{c(x)^2}\bigg)}_{\mathrm{diag}(\theta)}\Bigg)\underbrace{a(x)}_{z} = \underbrace{u(x)}_{b}.
+\Bigg(\underbrace{\nabla^2}_{A} + \underbrace{\bigg(\frac{\omega^2}{c(x)^2}\bigg)}_{\diag(\theta)}\Bigg)\underbrace{a(x)}_{z} = \underbrace{u(x)}_{b}.
 $$
 
 Now, we usually want the field ($z$) to look similar to a desired field (which we will call $\hat z$), while satisfying the physics equation described above. We can phrase this in several ways, but a [particularly natural one](/ls-images.html) is by attempting to minimize the objective $\left\|z - \hat z\right\|_2^2$.
@@ -100,7 +100,7 @@ Putting all of this together, we can write the optimization problem as
 $$
 \begin{array}{ll}
 \text{minimize} & \frac12\left\|z - \hat z\right\|_2^2\\
-\text{subject to} & (A + \mathrm{diag}(\theta))z = b\\
+\text{subject to} & (A + \diag(\theta))z = b\\
 & \theta^\mathrm{min} \le \theta \le \theta^\mathrm{max}.
 \end{array}
 $$
@@ -109,15 +109,15 @@ which is exactly problem (1) in the paper, in the special case where $W = I$, th
 ### Deriving the dual
 Here is essentially the only 'magic' part of the paper. First, we can write the Lagrangian of the problem as,
 $$
-\mathcal{L}(z, \theta, \nu) = \frac12\left\|z - \hat z\right\|_2^2 + \nu^T((A + \mathrm{diag}(\theta))z - b).
+\mathcal{L}(z, \theta, \nu) = \frac12\left\|z - \hat z\right\|_2^2 + \nu^T((A + \diag(\theta))z - b).
 $$
 Now, there is something weird here: notice that I sneakily dropped the term containing the lower and upper limits for $\theta$—this idea is, in fact, what saves the entire approach. What we will first do is the usual thing: we'll minimize the Lagrangian over all possible $z$, which we can easily do since the Lagrangian is a convex quadratic over $z$. In particular, taking the gradient over $z$ and setting it to zero (which is necessary and sufficient by convexity and differentiability) gives us that the optimal $z$ is
 $$
-z = \hat z - (A + \mathrm{diag(\theta)})^T\nu,
+z = \hat z - (A + \diag(\theta))^T\nu,
 $$
 which means that
 $$
-\inf_z \mathcal{L}(z, \theta, \nu) = - \frac12\left\|\hat z - (A + \mathrm{diag(\theta)})^T\nu\right\|_2^2 - \nu^Tb + \frac12\|\hat z\|_2^2.
+\inf_z \mathcal{L}(z, \theta, \nu) = - \frac12\left\|\hat z - (A + \diag(\theta))^T\nu\right\|_2^2 - \nu^Tb + \frac12\|\hat z\|_2^2.
 $$
 The next step is then finding the infimum of $\mathcal{L}$ over $\theta$. That is, finding
 $$
@@ -131,7 +131,7 @@ If you've convinced yourself of this (or haven't yet, but want to continue), we 
 $$
 \begin{aligned}
 g(\nu) &= \inf_{\theta^\mathrm{min} \le \theta \le \theta^\mathrm{max}} \left(\inf_z \mathcal{L}(z, \theta, \nu)\right)\\
-&= \inf_{\theta^\mathrm{min} \le \theta \le \theta^\mathrm{max}} \left(- \frac12\left\|\hat z - (A + \mathrm{diag(\theta)})^T\nu\right\|_2^2 - \nu^Tb + \frac12\|\hat z\|_2^2\right)
+&= \inf_{\theta^\mathrm{min} \le \theta \le \theta^\mathrm{max}} \left(- \frac12\left\|\hat z - (A + \diag(\theta))^T\nu\right\|_2^2 - \nu^Tb + \frac12\|\hat z\|_2^2\right)
 \end{aligned}
 $$
 The trick is to notice two things. One, that the objective is concave in $\theta$ and, two, that the objective is *separable* over each component of $\theta$. 
@@ -166,6 +166,7 @@ Additionally (I might discuss how this is done in a later post), we receive an i
 
 I highly recommend checking out the [pre-print that is up on arXiv](https://arxiv.org/abs/1811.12936) for more info. Also, if you spot any mistakes (in either the post or the paper), please do @ me!
 
+---
 
 [^maxwell]: This is... almost accurate, but not quite. It turns out a small modification to the problem is needed for Maxwell's equations in two and three dimensions. For specifics, see the appendix in the paper.
 

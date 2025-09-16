@@ -172,6 +172,7 @@ After reading this post, Alex said
 > To the readers of these papers: I hope you have as much fun reading them as we've had writing them.
 
 ---
+
 [^1]: At least, no idea how it could be derived de-novo without linear algebra. It has a number of "polynomial" interpretations in the special case of Reed–Solomon codes, but these are only obvious as special cases of the general linear-algebraic perspective, which is very simple.
 
 [^2]: In fact, the _size_ difference is actually exactly zero, the computation is negligible. A more practical variation (the ZODA tensor variation) has negligible, but nonzero, size and computation differences.

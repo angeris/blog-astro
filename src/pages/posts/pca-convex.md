@@ -123,7 +123,7 @@ $$
 \end{aligned}
 $$
 
-where $c_i = (U^TAU)_{ii}$. This LP has an integral solution $x^*$ (what should this solution be?) which preserves the objective value of the original problem, so $\bar P^* = U\text{diag}(x^*)U^T$ is a feasible, integral solution to the original problem, with the same objective value as the previous so the SDP relaxation is tight!
+where $c_i = (U^TAU)_{ii}$. This LP has an integral solution $x^*$ (what should this solution be?) which preserves the objective value of the original problem, so ${\bar P}^* = U\text{diag}(x^*)U^T$ is a feasible, integral solution to the original problem, with the same objective value as the previous so the SDP relaxation is tight!
 
 Using all of this, then we've converted the PCA problem into a purely convex one, without computing the actual solution beforehand.
 

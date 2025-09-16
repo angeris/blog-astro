@@ -121,6 +121,7 @@ Quick edit (3/18/22): Thanks to [bodonoghue85](https://twitter.com/bodonoghue85)
 
 <!-- Footnotes -->
 
+---
 
 [^wat]: See, *e.g.* page 429 of [this paper](https://aiche.onlinelibrary.wiley.com/doi/epdf/10.1002/aic.690290312), where they seem to re-prove basic things like "the supremum of a bunch of convex functions is convex," and "partial minimization of a convex function is convex," but I'm honestly not 100% sure.
 
