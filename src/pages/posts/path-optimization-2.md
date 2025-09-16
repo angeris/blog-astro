@@ -29,9 +29,9 @@ as our final trajectory. The goal of this post is to explore some methods for op
 I'll do a quick introduction to gradient descent since there are [plenty](https://medium.com/ai-society/hello-gradient-descent-ef74434bdfa5) of [posts](https://machinelearningmastery.com/gradient-descent-for-machine-learning/) on [this](https://www.quora.com/What-is-an-intuitive-explanation-of-gradient-descent) [method](http://homes.soic.indiana.edu/classes/spring2012/csci/b553-hauserk/gradient_descent.pdf), many of which I suspect are much better than anything I'll ever write.
 
 Anyways, the simple idea (or another perspective on it) is that, if we want to find the minimum of a function $V$, then we can think about the function as a potential for a particle, whose position we call $x$, and then just run Newton's equation forward in time!
-\[
+$$
 m\ddot x = -\nabla V(x)
-\]
+$$
 where $\ddot x = \frac{d^2x}{dt^2}$ (this is just a rewriting of $F=ma=m\ddot x$, where our force is conservative).  You may notice a problem with this idea: well, if we land in a well, we'll continue oscillating... that is, there's literally no friction to stop us from just continuing past the minimum. So, let's add this in as a force proportional to the velocity (but pointing in the opposite direction), with friction coefficient $\mu>0$:
 
 $$

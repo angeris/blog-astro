@@ -32,7 +32,7 @@ $$
 
 such that two things happen: one, that $\phi(x) \to 0$ as $x\to \infty$ and $\phi(x) \to 1$ as $x\to -\infty$, and, two, that $\phi(Cx)$ approximates a hard wall as $C\to \infty$. Below is $\phi(Cx)$ plotted for a few different values of $C$:
 
-<img src="/images/path-optimization-1/phi_curvature.png" class="plot">
+![Barrier functions for varying curvatures $C$.](/images/path-optimization-1/phi_curvature.png)
 *Barrier functions for varying curvatures $C$.*
 
 The idea is that the smooth problem should be easy to solve and we can get consistently better approximations by starting at the easy problem and solving a sequence of problems which, in the limit, give the desired path.

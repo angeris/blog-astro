@@ -161,7 +161,7 @@ For a relatively complex design, we found that a simple, commonly used heuristic
 
 Additionally (I might discuss how this is done in a later post), we receive an initial design that is qualitatively quite similar to the final, locally-optimized design. See the image below.
 
-<img src="/images/physics-impossibility-results/primal-dual-comparison.png" class="insert" style="width: 100%">
+![Comparison between the design suggested by the lower bound and the locally-optimized design.](/images/physics-impossibility-results/primal-dual-comparison.png)
 *Comparison between the design suggested by the lower bound and the locally-optimized design.*
 
 I highly recommend checking out the [pre-print that is up on arXiv](https://arxiv.org/abs/1811.12936) for more info. Also, if you spot any mistakes (in either the post or the paper), please do @ me!

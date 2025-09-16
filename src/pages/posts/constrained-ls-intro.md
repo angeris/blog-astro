@@ -113,22 +113,22 @@ $$
 
 Writing this out is a bit of a pain, but it's made a bit easier by noting that convolution with a 2D gaussian kernel is separable into two convolutions of 1D (e.g. convolve the image with the up-down filter, and do the same with the left-right) and by use of the Kronecker product to write out the individual matrices.[^kronecker-conv] The final $G$ is therefore the product of each of the convolutions. Just to show the comparison, here's the initial image, taken from [Wikipedia](https://commons.wikimedia.org/wiki/File:Lichtenstein_img_processing_test.png)
 
-<img src="/images/constrained-ls-intro/initial_image.png" class="insert">
+![Original greyscale image](/images/constrained-ls-intro/initial_image.png)
 *Original greyscale image*
 
 and here's the image, blurred with a 2D gaussian kernel of size 5, with $\sigma = 3$
 
-<img src="/images/constrained-ls-intro/blurred_image.png" class="insert">
+![Blurred greyscale image. The vignetting comes from edge effects.](/images/constrained-ls-intro/blurred_image.png)
 *Blurred greyscale image. The vignetting comes from edge effects.*
 
 The kernel, for context, looks like:
 
-<img src="/images/constrained-ls-intro/gaussian_kernel.png" class="insert">
+![2D Gaussian Kernel with $N=5, \sigma=3$](/images/constrained-ls-intro/gaussian_kernel.png)
 *2D Gaussian Kernel with $N=5, \sigma=3$*
 
 Solving the problem, as given before, yields the final (almost identical) image:
 
-<img src="/images/constrained-ls-intro/reconstructed_image.png" class="insert">
+![The magical reconstructed image!](/images/constrained-ls-intro/reconstructed_image.png)
 *The magical reconstructed image!*
 
 Which was nothing but solving a simple least squares problem (as we saw above)!
@@ -151,29 +151,29 @@ $$
 
 where $\lambda \ge 0$ is our 'smoothness' parameter. Note that, if we send $\lambda \to \infty$ then we really care that our image is 'infinitely smooth' (what would that look like?[^smooth-image]), while if we send it to zero, we care that the reconstruction from the (possibly not great) approximation of $G^\text{real}$ is really good. Now, let's compare the two methods with a slightly corrupted image:
 
-<img src="/images/constrained-ls-intro/corrupted_blurred_image.png" class="insert">
+![The corrupted, blurred image we feed into the algorithm](/images/constrained-ls-intro/corrupted_blurred_image.png)
 *The corrupted, blurred image we feed into the algorithm*
 
-<img src="/images/constrained-ls-intro/initial_image.png" class="insert">
+![Original greyscale image (again, for comparison)](/images/constrained-ls-intro/initial_image.png)
 *Original greyscale image (again, for comparison)*
 
-<img src="/images/constrained-ls-intro/smoothed_corrupted_reconstructed_image_l=1e-07.png" class="insert">
+![Reconstruction with $\lambda = 10^{-7}$](/images/constrained-ls-intro/smoothed_corrupted_reconstructed_image_l=1e-07.png)
 *Reconstruction with $\lambda = 10^{-7}$*
 
-<img src="/images/constrained-ls-intro/corrupted_reconstructed_image.png" class="insert">
+![Reconstruction with original method](/images/constrained-ls-intro/corrupted_reconstructed_image.png)
 *Reconstruction with original method*
 
 Though the normalized one has slightly larger grains, note that, unlike the original, the contrast isn't as heavily lost and the edges, etc, are quite a bit sharper.
 
 We can also toy a bit with the parameter, to get some intuition as to what all happens:
 
-<img src="/images/constrained-ls-intro/smoothed_corrupted_reconstructed_image_l=0.001.png" class="insert">
+![Reconstruction with $\lambda = 10^{-3}$](/images/constrained-ls-intro/smoothed_corrupted_reconstructed_image_l=0.001.png)
 *Reconstruction with $\lambda = 10^{-3}$*
 
-<img src="/images/constrained-ls-intro/smoothed_corrupted_reconstructed_image_l=1e-05.png" class="insert">
+![Reconstruction with $\lambda = 10^{-5}$](/images/constrained-ls-intro/smoothed_corrupted_reconstructed_image_l=1e-05.png)
 *Reconstruction with $\lambda = 10^{-5}$*
 
-<img src="/images/constrained-ls-intro/smoothed_corrupted_reconstructed_image_l=1e-10.png" class="insert">
+![Reconstruction with $\lambda = 10^{-10}$](/images/constrained-ls-intro/smoothed_corrupted_reconstructed_image_l=1e-10.png)
 *Reconstruction with $\lambda = 10^{-10}$*
 
 Of course, as we make $\lambda$ large, note that the image becomes quite blurry (e.g. 'smoother'), and as we send $\lambda$ to be very small, we end up with the same solution as the original problem, since we're saying that we care very little about the smoothness and much more about the reconstruction approximation.
