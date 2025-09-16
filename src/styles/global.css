@@ -11,21 +11,26 @@ body {
     line-height: 1.8;
     font-size: 19px;
     color: #222;
-    padding: 0 10px;   
+    padding: 0 10px;
 }
 
 h1 {
     font-size: 40px;
 }
+
 h2 {
     font-size: 30px;
     line-height: 1;
 }
+
 h3 {
     font-size: 26px;
     line-height: 1.5;
 }
-h1, h2, h3 {
+
+h1,
+h2,
+h3 {
     font-family: 'helvetica neue', sans-serif;
     font-weight: 300;
 }
@@ -145,7 +150,7 @@ medium display: nav goes under name
         width: 100%;
         padding-bottom: 10px;
     }
-    
+
     nav {
         width: 100%;
     }
@@ -156,15 +161,59 @@ ul.post-list {
     padding: unset;
     display: block;
 }
+
 ul.post-list li {
     margin: .5em;
 }
+
 ul.post-list li a {
     font-family: 'helvetica neue', sans-serif;
     font-weight: 300;
     padding-right: .2em;
 }
 
-.astro-code {
+code {
     font-size: 15px;
+}
+
+@media (prefers-color-scheme: dark) {
+
+    html,
+    body {
+        background-color: #0f172a;
+    }
+
+    body {
+        color: #e2e8f0;
+    }
+
+    a {
+        color: #8fbcec;
+    }
+
+    a:hover {
+        color: #cbd5ff;
+    }
+
+    header .blog-name a {
+        color: #94a3ff;
+    }
+
+    header li a:hover {
+        color: #f8fafc;
+    }
+
+    hr {
+        border-color: #1f2a3a;
+    }
+
+    .astro-code,
+    .astro-code span {
+        color: var(--shiki-dark) !important;
+        background-color: var(--shiki-dark-bg) !important;
+        /* Optional, if you also want font styles */
+        font-style: var(--shiki-dark-font-style) !important;
+        font-weight: var(--shiki-dark-font-weight) !important;
+        text-decoration: var(--shiki-dark-text-decoration) !important;
+    }
 }
