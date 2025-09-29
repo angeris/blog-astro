@@ -42,7 +42,7 @@ Here, the variables are the distributions $x_t \in \mathbf{R}^{mn}$ over the sta
 
 First, the objective. At each time step $t=1, \dots, T$, the expected probability that we execute state-action pair $j$ is given by $(x_t)_j$. The loss incurred from doing that is $(\ell_t)_j$, so take the inner product and sum that over all possible times $t=1, \dots, T$ to get the loss.
 
-Let's start with the last two constraints. Obviously since $x_t$ is a probability distribution, it should be nonnegative, which is just being enforced here for all times. On the other hand, we know that the initial state of the system (no matter what actions we take) will have probability distribution $p_1$, by assumption. So, we must have that $Sx_1 = p_1$, as required.
+Let's start with the last two constraints. Obviously since $x_t$ is a probability distribution, it should be nonnegative, which is just being enforced here for all times $t$. On the other hand, we know that the initial state of the system (no matter what actions we take) will have probability distribution $p_1$, by assumption. So, we must have that $Sx_1 = p_1$, as required.
 
 Finally, the first constraint is simply encoding the dynamics we talked about in the previous section. The matrix $M_t$ maps the state-action pairs at time $t$ to the distribution over states at time $t+1$. But the distribution over states at time $t+1$ is, by definition, the sum over all possible actions, for each state, which is simply $Sx_t$. We enforce this for each time $t = 1$ all the way to $t = T-1$ (since the final state is $x_T$.)
 
@@ -103,12 +103,12 @@ Here's a simple one, which I will leave to the reader to prove is a maximizing p
 $$
 (\nu_t)_i = (\ell_t + M_t^T\nu_{t+1})_j.
 $$
-(That is, the state-action pair $j$ is a minimizer for state $i$ at time $t$.) Set $(x_{t+1})_j = (M_t x_t)_i$ and set all other state-action pairs which contain state $i$ to zero. Do the same for all possible states $i$ and so on for all $t=1, dots, T$, then this will result in a feasible set of $x_t$. Can you show this is optimal? (The simplest way is essentially the Bellman approach. The second simplest is via complementary slackness.)[^2]
+(That is, the state-action pair $j$ is a minimizer for state $i$ at time $t$.) Set $(x_{t+1})_j = (M_t x_t)_i$ and set all other state-action pairs which contain state $i$ to zero. Do the same for all possible states $i$ and so on for all $t=1, \dots, T$, then this will result in a feasible set of $x_t$. Can you show this is optimal? (The simplest way is essentially the Bellman approach. The second simplest is via complementary slackness.)[^2]
 
 ## General thoughts
 It is also possible to take some limits (under certain assumptions over the operators, etc) and recover the "true" HJB equation in the continuous limit, similar to the one that Matt posted. This is a little more annoying than the "standard" approach, but can be made fully rigorous, though I won't do so here.
 
-Overall, this is probably a slightly more complicated way to derive the construction than the standard Bellman approach. Of course, once you recognize that a value function of the form above can be constructed, the rest is just mechanical. What's interesting about this approach, though, is that it is simply duality + basic observations.
+Overall, this is probably a slightly more complicated way to derive the construction than the standard Bellman approach. Of course, once you recognize that a value function of the form above can be constructed, the rest is just mechanical. What's interesting about this _particular_ approach, though, is that it is simply duality + basic observations.
 
 ---
 
