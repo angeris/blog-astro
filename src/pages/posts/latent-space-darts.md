@@ -79,7 +79,7 @@ By virtue of our choice of random directions, we are putting out an exponential 
 
 It is, in turn, not clear that doing additional training of the SAEs is doing what we expect, other than roughly "fitting the corpus to reasonable dimensions" but it's not even clear that this is necessary!
 
-Surely someone has some basic data on this (even if just as the initialization for some SAE training run?) so I'd be curious to see if that confirms the claim. My suspicion is that the features from these random $x_i$ won't be _quite as interpretable_ as a "trained" SAE, but my guess is it's probably not as far off as one would expect. This seems at least slightly suggested by the second paper linked above, so I'd be curious as to results.
+Surely someone has some basic data on this (even if just as the initialization for some SAE training run?) so I'd be curious to see if that confirms the claim. My suspicion is that the features from these random $x_i$ won't be _quite as interpretable_ as a "trained" SAE, but my guess is it's probably not as far off as one would expect. This seems at least slightly suggested by the second paper linked above, but, unfortunately, I guess we can't know until we try!
 
 ---
 
