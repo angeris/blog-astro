@@ -224,3 +224,10 @@ code {
         text-decoration: var(--shiki-dark-text-decoration) !important;
     }
 }
+/* Keep display math readable on narrow viewports */
+math.tml-display {
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 0.5rem;
+}
