@@ -10,7 +10,7 @@ In this (short-ish) post, I hope to make a little bit of a different argument th
 
 ## Open source as a learning tool
 
-Much like old writings in ancient libraries that are still recoverable, open source is an _artifact_ that we leave for future generations to learn, understand, tinker with, and learn from, all without having to ask anyone for permission or pay anybody to do so. There's no need to be part of any particular group, have a university degree, or have some sort of affiliation to access open source software.
+Much like old writings in ancient libraries that are still recoverable, open source is an _artifact_ that we leave for future generations to understand, tinker with, and learn from, all without having to ask anyone for permission or pay anybody to do so. There's no need to be part of any particular group, have a university degree, or have some sort of affiliation to access open source software.
 
 It might not seem super important; after all, what's wrong with paying for software? I mean, in general, it's not _that_ expensive, certainly relative to the hardware that we run it on.
 
