@@ -38,7 +38,7 @@ Compare this to building the [Prusa Core ONE](https://www.prusa3d.com/product/pr
 
 ### Printing the parts
 
-Printing everything for the LDO took around 25 or so hours of printing on the previously-assembled Prusa Core ONE. Maybe one or two hours were spent finding all of the STL files for the assembly, figuring out which ones were the ones I needed, what [mods](https://docs.ldomotors.com/en/voron/voron02/printed_part_guide_rev_a+) did LDO recommend for their kit, and so on.
+Printing everything for the LDO took around 25 or so hours on the previously-assembled Prusa Core ONE. Maybe one or two hours were spent finding all of the STL files for the assembly, figuring out which ones were the ones I needed, what [mods](https://docs.ldomotors.com/en/voron/voron02/printed_part_guide_rev_a+) did LDO recommend for their kit, and so on.
 
 ![Parts](/images/3d-printed-printer/parts.jpeg)
 
@@ -77,15 +77,15 @@ These were generally pretty easy, except for one thing: make sure you have them 
 
 All-in, this probably cost at least an hour or two just in dumb mistakes, but alas.
 
-Finally, there was some fun with wrangling wires from the bed (which has to be done somewhat carefully since the bed is a hot element... it would be a shame if your fancy wires melted because of that). Most of the work here though was really just getting it all to look nice and presentable.
+Finally, there was some fun with wrangling wires from the bed. (This has to be done somewhat carefully since the bed is a hot element... it would be a shame if your fancy wires melted because they were touching the bed.) Most of the work here though was really just getting it all to look nice and presentable.
 
 ### Extruder drive
 
-This was a fun one as it's one of the places where the tolerances of the printed parts is a little annoying.
+This was a fun one as it's one of the places where the tolerances of the printed parts can be a bit annoying.
 
 ![Finished toolhead](/images/3d-printed-printer/toolhead-finished.jpeg)
 
-Here, one of the problems (which I am still, to this day, not sure how it was resolved) was that one of the latches was very tight. I think this caused some of the rest of the toolhead to move slightly, which, in turn, caused the teeth that are supposed to "catch" the plastic filament used for printing and feed it into the hotend[^5] to... not "catch" the filament and feed into the hotend. (In particular, the motor would spin freely and essentially independently of the filament.)
+Here, one of the problems (which I am still, to this day, not sure how it was resolved) was that the latch was very tight. I think this caused some of the rest of the toolhead to move slightly, which, in turn, caused the teeth that are supposed to "catch" the plastic filament used for printing and feed it into the hotend[^5] to... not "catch" the filament and feed into the hotend. (In particular, the motor would spin freely and essentially independently of the filament, which meant that no plastic got extruded.)
 
 After some futzing around, latching and unlatching, and disassembling and reassembling, the problem went away and has been ok since, at least as far as I can tell.
 
@@ -139,5 +139,5 @@ Until next time.
 
 [^5]: Probably self-explanatory, but the "hotend" is the part that actively melts the plastic that then gets deposited.
 
-[^6]: For the control/optimization nerds that read this blog: the "input shaper" it is essentially a basic input control that dampens ringing, if we model the toolhead on a gantry as a dampened oscillator. The basic model is that the acceleration input looks like a trapezoid and the slope of the rise and fall edges have to be tuned.
+[^6]: For the control/optimization nerds that read this blog: the "input shaper" is essentially a basic input control that dampens ringing, if we model the toolhead on a gantry as a dampened oscillator. The basic shape of the control is that the acceleration input looks like a trapezoid and the slope of the rise and fall edges have to be tuned to remove said ringing.
 
