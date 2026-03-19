@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
 title: "Breaking signals, breaking systems"
-pubDate: 2026-02-23
+pubDate: 2026-03-19
 ---
 
 I've been having a hard time enunciating why, exactly, when people send me outputs of ChatGPT, or Claude, etc. (and I spend enough time with the models that I can generally tell this is the case) I have a surprisingly strong negative reaction. This post is one attempt at making my reasoning somewhat-legible.
