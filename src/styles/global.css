@@ -231,3 +231,14 @@ math.tml-display {
     -webkit-overflow-scrolling: touch;
     padding-bottom: 0.5rem;
 }
+
+@supports (font: -apple-system-body) {
+    /*
+    Safari collapses some display-math glyphs from Latin Modern Math to
+    zero-sized boxes. Use WebKit's native MathML font for Safari.
+    */
+    math,
+    math * {
+        font-family: math !important;
+    }
+}
