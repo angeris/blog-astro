@@ -11,6 +11,7 @@ export default defineConfig({
 		rehypePlugins: [[rehypeMathML, {
 			macros: temml.definePreamble(`
 				\\renewcommand{\\reals}{\\mathbf{R}}
+				\\renewcommand{\\to}{\\rightarrow}
 				\\newcommand{\\diag}{\\mathbf{diag}}
 				\\newcommand{\\E}{\\mathbf{E}}
 			`)

@@ -46,7 +46,7 @@ V / W = \{v + W \mid v \in V\},
 $$
 where $v + W$ is defined elementwise; _i.e._, $v + W = \{v + w \mid w \in W\}$. The notion of a coset for vector spaces is identical to the one of Abelian groups, except that we work with subspaces which are the natural analogue to subgroups in the standard setting.
 
-Note that $V / W$ is itself a vector space under the standard operations (again, applied elementwise) with the zero element $0$ equivalent to $0 + W$. (In what follows, it will be worth to use $0$ as $0+W$ and vice versa, but the "type" of zero should be clear from context.) To see that $V/W$ is a vector space, let $v + W$ and $v' + W$ be any "vectors" in $V / W$ and let $\alpha, \beta \in \mathbf{F}$ be any elements of the field which $V$ is over, then
+Note that $V / W$ is itself a vector space under the standard operations (again, applied elementwise) with the zero element $0$ equivalent to $0 + W$. (In what follows, it will be worth it to use $0$ as $0+W$ and vice versa, but the "type" of zero should be clear from context.) To see that $V/W$ is a vector space, let $v + W$ and $v' + W$ be any "vectors" in $V / W$ and let $\alpha, \beta \in \mathbf{F}$ be any elements of the field which $V$ is over, then
 $$
 \alpha (v + W) + \beta (v' + W) = \alpha v + \beta v' + W \in V / W.
 $$
