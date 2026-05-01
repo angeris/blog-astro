@@ -68,7 +68,7 @@ Note that $W_p$ is a perfectly reasonable subspace of $V$ since adding polynomia
 
 This view leads to a bunch of nice results.
 
-For example, it is reasonable to ask what vector subspaces $W_p + W_q$ correspond to for polynomials $p$ and $q$? This is just the set of polynomials that can be written as $a p + bq$ for $a, b \in V$, by definition of $W_p$ and $W_q$. Using Bezout's lemma, this is the same as $W_{(p, q)}$ where $(p, q)$ is the (polynomial) greatest common divisor of $p$ and $q$. Similarly, you should work out what $W_p \cap W_q$ is. (If you're familiar with ideals, this is, for now, just a rewriting of the standard theorems there, hence the use of parenthesis notation!)
+For example, it is reasonable to ask: what do the vector subspaces $W_p + W_q$ correspond to, for some polynomials $p$ and $q$? Writing out definitions, this is just the set of polynomials that can be written as $a p + bq$ for $a, b \in V$, by definition of $W_p$ and $W_q$. Using Bezout's lemma, this is the same as $W_{(p, q)}$ where $(p, q)$ is the (polynomial) greatest common divisor of $p$ and $q$. Similarly, you should work out what $W_p \cap W_q$ is. (If you're familiar with ideals, this is, for now, just a rewriting of the standard theorems there, hence the use of parenthesis notation!)
 
 Additionally, note that the set of vectors in $V$ modulo $W_p$ (in the linear algebraic sense) is exactly the same as the set of polynomials modulo $p$ (in the polynomial sense). We will show that, indeed, quotienting $V$ by the space $W_p$ is the same as quotienting general polynomials by the polynomial $p$, in that
 $$
