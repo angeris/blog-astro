@@ -30,7 +30,7 @@ That is, if there exists some invertible linear map $W \to \mathbf{F}^{\dim(W)}$
 
 Note that $\dim(W)$ is unique (if it exists) so does not depend on the mapping. This means that if we have another subspace $U \subseteq V$ with $\dim(U) = \dim(W)$, then $U \simeq W$ since $U \simeq \mathbf{F}^{\dim(U)} = \mathbf{F}^{\dim(W)} \simeq W$.
 
-In general, given two finite-dimensional vector spaces $U$ and $W$, then $U \simeq W$ exactly when $\dim(U) = \dim(W)$. The former often conveys slightly more information in practice since the mappings between $U$ and $W$ are fairly natural when constructed, but if we only know that $\dim(U) = \dim(W)$ then the map $U \to W$ may be fairly arbitrary and potentially complicated (though it will be, of course, linear).
+In general, given two finite-dimensional vector subspaces $U$ and $W$ (or, slightly more generally, two vector spaces over the same field), then $U \simeq W$ exactly when $\dim(U) = \dim(W)$. The former often conveys slightly more information in practice since the mappings between $U$ and $W$ are fairly natural when constructed, but if we only know that $\dim(U) = \dim(W)$ then the map $U \to W$ may be fairly arbitrary and potentially complicated (though it will be, of course, linear).
 
 It is also pretty easy to see from this definition that $\dim(U \times W) = \dim(U) + \dim(W)$ when $U$ and $W$ are finite-dimensional. (Consider the "obvious" map $U \times W \to U \to \mathbf{F}^{\dim(U)}$ and similarly for $W$.)
 
@@ -96,7 +96,7 @@ Of course, this exactly matches the degree bound for polynomial division and the
 
 Now, we can get to a result that generalizes the case of ideals.
 
-An interesting observation from Wisbauer 1991's textbook is the following very lovely construction (let's say over vector spaces, but it holds in general over modules with a slightly different condition).
+An interesting observation from Wistbauer's 1991 textbook is the following very lovely construction (let's say over vector spaces, but it holds in general over modules with a slightly different condition).
 
 Let $W_1, \dots, W_n \subseteq V$ be vector subspaces of $V$ such that $V / \bigcap_i W_i$ is finite-dimensional, then
 
@@ -168,6 +168,9 @@ There's all sorts of additional simple consequences of this view. For example, t
 
 As a final exercise: what's the interpretation of $T$ and the dimension conditions in the case that the subspaces do not satisfy $\bigcap_i W_i = \{0\}$?
 
+---
+
+Edits: thank you to [seanhunter](https://news.ycombinator.com/item?id=48010630) for pointing out silly mistakes!
 
 ---
 
