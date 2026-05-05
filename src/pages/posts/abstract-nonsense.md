@@ -30,7 +30,7 @@ That is, if there exists some invertible linear map $W \to \mathbf{F}^{\dim(W)}$
 
 Note that $\dim(W)$ is unique (if it exists) so does not depend on the mapping. This means that if we have another subspace $U \subseteq V$ with $\dim(U) = \dim(W)$, then $U \simeq W$ since $U \simeq \mathbf{F}^{\dim(U)} = \mathbf{F}^{\dim(W)} \simeq W$.
 
-In general, given two finite-dimensional vector subspaces $U$ and $W$ (or, slightly more generally, two vector spaces over the same field), then $U \simeq W$ exactly when $\dim(U) = \dim(W)$. The former often conveys slightly more information in practice since the mappings between $U$ and $W$ are fairly natural when constructed, but if we only know that $\dim(U) = \dim(W)$ then the map $U \to W$ may be fairly arbitrary and potentially complicated (though it will be, of course, linear).
+In general, given two finite-dimensional vector subspaces $U$ and $W$ (or, slightly more generally, two vector spaces over the same field) then $U \simeq W$ exactly when $\dim(U) = \dim(W)$. The former often conveys slightly more information in practice since the mappings between $U$ and $W$ are fairly natural when constructed, but if we only know that $\dim(U) = \dim(W)$ then the map $U \to W$ may be fairly arbitrary and potentially complicated (though it will be, of course, linear).
 
 It is also pretty easy to see from this definition that $\dim(U \times W) = \dim(U) + \dim(W)$ when $U$ and $W$ are finite-dimensional. (Consider the "obvious" map $U \times W \to U \to \mathbf{F}^{\dim(U)}$ and similarly for $W$.)
 
