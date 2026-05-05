@@ -44,12 +44,7 @@ for $\alpha_0, \dots, \alpha_n \in \mathbf{F}$ with $\alpha_1, \dots, \alpha_n$ 
 $$
 V / W_p \simeq \prod_i V / W_{q_i},
 $$
-via the simple map above.  Finally, note that $\dim(V / W_{q_i}) = \deg(q_i) =1$ for
-each $i$, so $V / W_{q_i}$ can be described by exactly one field element
-$\mathbf{F}$. Indeed, [from the previous post](/posts/abstract-nonsense.html),
-one such description is that $f \in V / W_{q_i}$ is equivalent to taking the
-remainder of $f$ modulo $q_i$, which is simply the value of $f$ at
-$\alpha_i$.[^1]
+via the simple map above.  Finally, note that $\dim(V / W_{q_i}) = \deg(q_i) =1$ for each $i$, so $V / W_{q_i}$ can be described by exactly one field element $\mathbf{F}$. Indeed, [from the previous post](/posts/abstract-nonsense.html), one such description is that $f \in V / W_{q_i}$ is equivalent to taking the remainder of $f$ modulo $q_i$, which is simply the value of $f$ at $\alpha_i$.[^1]
 
 In other words, there is a simple invertible linear mapping between a polynomial (modulo $p$) and its evaluation on points $\alpha_1, \dots, \alpha_n$, which are the roots of $p$. That is to say for each polynomial $f$ modulo $p$, there is an equivalence $f \to \hat f$ between the polynomial modulo $p$, $f + W_p$, and its evaluations $f(\alpha_1), \dots, f(\alpha_n)$.
 
@@ -111,9 +106,9 @@ Here, we write $f * g$ for the circular convolution of the coefficients of $f$ a
 
 Finally, we note that there are a bunch of other possible types of Fourier transform, including the so-called "additive" Fourier transform, which works over fields of characteristic two. (It really works for any finite field of nonzero characteristic, but small-characteristic fields are the most practical; we'll go through the characteristic-two case here and leave the rest as an exercise.)
 
-Let $\mathbf{F}$ be a finite field with $|\mathbf{F}|=2^m$ for some positive integer $m$, then note that $\mathbf{F}$ is a vector space over $\{0,1\}$ of dimension $m$. (Why?) Let $e_1, \dots, e_m$ be any basis of this vector space and let $n \le m$. In what follows, $2^n$ will be the number of evaluation points of the polynomial $f$ modulo a particular polynomial $p$ we will choose carefully.
+Let $\mathbf{F}$ be a finite field with $|\mathbf{F}|=2^m$ for some positive integer $m$, then note that $\mathbf{F}$ is a vector space over $\mathbf{F}_2 = \{0,1\}$ of dimension $m$. (Why?) Let $e_1, \dots, e_m$ be any basis of this vector space and let $n \le m$. In what follows, $2^n$ will be the number of evaluation points of the polynomial $f$ modulo a particular polynomial $p$ we will choose carefully.
 
-With that, let $p$ be a polynomial that vanishes on any $x$ which is in the span of $e_1, \dots, e_n$ (not $m$) over $\mathbf{F}_2 = \{0,1\}$. Call this the $\mathbf{F}_2$-vector space $A$. Explicitly, $p$ can be, for example
+With that, let $p$ be a polynomial that vanishes on any $x$ which is in the span of $e_1, \dots, e_n$ (not $m$) over $\mathbf{F}_2$. Call this the $\mathbf{F}_2$-vector space $A$. Explicitly, $p$ can be, for example
 $$
 p(x) = \prod_{\beta \in \{0, 1\}^n} (x - \beta_1e_1 - \dots - \beta_n e_n) = \prod_{\alpha \in A} (x - \alpha).
 $$
