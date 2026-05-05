@@ -104,7 +104,7 @@ Here, we write $f * g$ for the circular convolution of the coefficients of $f$ a
 
 ### The "additive" Fourier transform
 
-Finally, we note that there are a bunch of other possible types of Fourier transform, including the so-called "additive" Fourier transform, which works over fields of characteristic two. (It really works for any finite field of nonzero characteristic, but small-characteristic fields are the most practical; we'll go through the characteristic-two case here and leave the rest as an exercise.)
+Finally, we note that there are a bunch of other possible types of Fourier transform, including the so-called "additive" Fourier transform, which works over fields of characteristic two. (It really works for any finite field of nonzero characteristic, but small-characteristic fields are the most practical; we'll go through the characteristic-two case here and leave the rest as an exercise.) This type of transform is incredibly useful in a number of succinct proofs, see, _e.g._, [Binius](https://eprint.iacr.org/2023/1784), [ZODA](https://eprint.iacr.org/2025/034), or [Ligerito](https://eprint.iacr.org/2025/1187).
 
 Let $\mathbf{F}$ be a finite field with $|\mathbf{F}|=2^m$ for some positive integer $m$, then note that $\mathbf{F}$ is a vector space over $\mathbf{F}_2 = \{0,1\}$ of dimension $m$. (Why?) Let $e_1, \dots, e_m$ be any basis of this vector space and let $n \le m$. In what follows, $2^n$ will be the number of evaluation points of the polynomial $f$ modulo a particular polynomial $p$ we will choose carefully.
 
