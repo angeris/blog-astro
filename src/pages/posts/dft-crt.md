@@ -98,9 +98,9 @@ As mentioned before, the multiplication $fg$ is multiplication as polynomials. T
 
 Equivalently, this gives the "vectorial form", when $f$ and $g$ are assumed to be of degree $\le n-1$:
 $$
-f * g \mapsto \hat f \circ \hat g.
+f * g \quad \mapsto \quad \hat f \circ \hat g.
 $$
-Here, we write $f * g$ for the circular convolution of the coefficients of $f$ and $g$ and write $\hat f_i = f(\alpha_i)$ and similarly for $g$, with $\circ$ being the elementwise (Hadamard) product, and the forward map between the two is the evaluation map. (A simple exercise is to write out what the matrix $F \in \mathbf{F}^{n \times n}$ such that $\hat f = Ff$ looks like!)
+Here, we write $f * g$ for the circular convolution of the coefficients of $f$ and $g$ and write $\hat f_i = f(\alpha_i)$ and similarly for $g$, with $\circ$ being the elementwise (Hadamard) product. From before, the forward map between the convolution and the product is the evaluation map $f \mapsto \hat f$. (A simple exercise is to write out what the matrix $F \in \mathbf{F}^{n \times n}$ such that $\hat f = Ff$ looks like!)
 
 ### The "additive" Fourier transform
 
