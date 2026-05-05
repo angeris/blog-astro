@@ -124,7 +124,7 @@ and this map is the obvious one: $f + W_p \to f(\alpha)$ for each $\alpha \in A$
 
 As a little bit of a cliffhanger, it is not hard to show by induction that $p$ satisfies $p(x + y) = p(x) + p(y)$ for any $x, y \in \mathbf{F}$, as does any polynomial of that form.
 
-We can then split $A$ into two disjoint cosets $A = A' \cup (u + A')$, for some $u\in \mathbf{F}$ and some $A' \subseteq A$ which also a vector space over $\mathbf{F}_2$. Set $q$ to be the polynomial that vanishes over $A'$, in the same way as $p$ above, then $p(x)=q(x)q(x - u) = q(x)(q(x) + q(u))$, since $a - b = a+b$ in characteristic two. From before, $q$ and $q+q(u)$ split over $\mathbf{F}$, yet share no roots since they vanish over $A'$ and $u + A'$ respectively, which share no common elements. This means they are mutually coprime and, by the abstract Chinese remainder theorem above, we have
+We can then split $A$ into two disjoint cosets $A = A' \cup (u + A')$, for some $u\in \mathbf{F}$ and some $A' \subseteq A$ which also a vector space over $\mathbf{F}_2$. (For example, we can take $A' = \span(e_1, \dots, e_{n-1})$ and $u = e_{n}$.) Set $q$ to be the polynomial that vanishes over $A'$, in the same way as $p$ above, then $p(x)=q(x)q(x - u) = q(x)(q(x) + q(u))$, since $a - b = a+b$ in characteristic two. From before, $q$ and $q+q(u)$ split over $\mathbf{F}$, yet share no roots since they vanish over $A'$ and $u + A'$ respectively, which share no common elements. This means they are mutually coprime and, by the abstract Chinese remainder theorem above, we have
 $$
 f + W_p \quad \mapsto \quad (f+W_q, f+W_{q+q(u)}).
 $$
