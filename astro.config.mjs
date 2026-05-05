@@ -14,6 +14,7 @@ export default defineConfig({
 				\\renewcommand{\\to}{\\rightarrow}
 				\\newcommand{\\diag}{\\mathbf{diag}}
 				\\newcommand{\\E}{\\mathbf{E}}
+				\\newcommand{\\conv}{\\operatorname{conv}}
 			`)
 		}]],
 		shikiConfig: {
