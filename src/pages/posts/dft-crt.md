@@ -40,11 +40,16 @@ Now, if $p$ _splits_ over $\mathbf{F}$ and has no repeated root, that is, if $p$
 $$
 p(x) = \alpha_0(x - \alpha_1)(x - \alpha_2)\cdots (x - \alpha_n)
 $$
-for $\alpha_0, \dots, \alpha_n \in \mathbf{F}$ with $\alpha_1, \dots, \alpha_n$ distinct, then we can set $q_i(x) = x - \alpha_i$ for $i=1, \dots, n$. (Easy check: what must $n$ be here, in terms of $p$?) Note that the $q_i$ are indeed mutually coprime and $\bigcap_i W_{q_i} = W_p$, which gives the very simple equivalence that
+for $\alpha_0, \dots, \alpha_n \in \mathbf{F}$ with $\alpha_1, \dots, \alpha_n$ distinct, then we can set $q_i(x) = x - \alpha_i$ for $i=1, \dots, n$. (Easy check: what must $n$ be here, in terms of $p$?) Note that the $q_i$ are indeed mutually coprime and $\bigcap_i W_{q_i} = W_p$, so the conditions are satisfied and, from before, we have
 $$
-V / W_p \simeq \prod_i V / W_{q_i}.
+V / W_p \simeq \prod_i V / W_{q_i},
 $$
-Finally, note that $\dim(V / W_{q_i}) = \deg(q_i) =1$ for each $i$, so $V / W_{q_i}$ can be described by exactly one field element $\mathbf{F}$. Indeed, [from the previous post](/posts/abstract-nonsense.html), one such description is that $f \in V / W_{q_i}$ is equivalent to taking the remainder of $f$ modulo $q_i$, which is simply the value of $f$ at $\alpha_i$.[^1]
+via the simple map above.  Finally, note that $\dim(V / W_{q_i}) = \deg(q_i) =1$ for
+each $i$, so $V / W_{q_i}$ can be described by exactly one field element
+$\mathbf{F}$. Indeed, [from the previous post](/posts/abstract-nonsense.html),
+one such description is that $f \in V / W_{q_i}$ is equivalent to taking the
+remainder of $f$ modulo $q_i$, which is simply the value of $f$ at
+$\alpha_i$.[^1]
 
 In other words, there is a simple invertible linear mapping between a polynomial (modulo $p$) and its evaluation on points $\alpha_1, \dots, \alpha_n$, which are the roots of $p$. That is to say for each polynomial $f$ modulo $p$, there is an equivalence $f \to \hat f$ between the polynomial modulo $p$, $f + W_p$, and its evaluations $f(\alpha_1), \dots, f(\alpha_n)$.
 
