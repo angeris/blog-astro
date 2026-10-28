@@ -30,5 +30,5 @@ Anyways, here's the list I've accumulated so far. All the Siri bugs are on the "
 9. On the Phone app, sometimes the “Recents” calls do not update, which requires force closing the app to restart it (after which time the new calls show).
 10. When scrolling or typing text that is longer, sometimes "blue underlined words" will not scroll (or correctly overflow) leading to an effect where the text overlaps with other text and makes it unreadable. Wiggling the text box seems to fix it most of the time.
 
-Note that this list only includes material-ish bugs, not ones that are ephemeral or only observed once; these are also only the ones I wrote down while it was happening. I might continue the list as I observe more, but this is probably enough for now (and a week's worth of usage of default apps).
+Note that this list only includes material-ish bugs, not ones that are ephemeral or only observed once; these are also only the ones I wrote down while it was happening. I might continue the list as I observe more, but this is probably enough for now (and definitely enough for only a week's worth of usage of default apps).
 
