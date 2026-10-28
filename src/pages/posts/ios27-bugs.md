@@ -15,7 +15,7 @@ For example, my parents (themselves reasonably technical people who work in engi
 
 and so on.
 
-With that, I spent around a week just normally using my recently-purchased iPhone 18 pro or whatever with an open mind around bugs. I was shocked at how long the list was, even though I barely use non-standard apps. I would also assume that with the ability to quickly code using agents, make scaffolds for heavily testing UI, being able to have agents test for regressions in performance, Apple could reasonably well prevent stupid bugs in standard apps, but alas it is not so. (In some cases, it is so bad that I wonder if Apple employees use their own products, but that's a different point for another day.)
+With that, I spent around a week just normally using my recently-purchased iPhone 18 pro or whatever, started without a backup, with an open mind around bugs. I was shocked at how long the list was, even though I barely use non-standard apps. I would also assume that with the ability to quickly code using agents, make scaffolds for heavily testing UI, being able to have agents test for regressions in performance, Apple could reasonably well prevent stupid bugs in standard apps, but alas it is not so. (In some cases, it is so bad that I wonder if Apple employees use their own products, but that's a different point for another day.)
 
 Anyways, here's the list I've accumulated so far. All the Siri bugs are on the "current Siri beta" (which has been in beta for... a while now).
 
